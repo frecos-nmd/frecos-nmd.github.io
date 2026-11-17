@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://frecos-nmd.github.io/sitemap.xml
