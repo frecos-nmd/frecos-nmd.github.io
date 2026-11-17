@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Frente Ecosocial y Nuevo Modelo de Desarrollo — Frente Amplio</title>
-<meta name="description" content="Análisis de coyuntura, actividades y noticias del Frente Ecosocial y Nuevo Modelo de Desarrollo del Frente Amplio.">
+<title>Frente Ecosocial y Nuevo Modelo de Desarrollo | Frente Amplio</title>
+<meta name="description" content="Frente Ecosocial y Nuevo Modelo de Desarrollo del Frente Amplio: análisis de coyuntura, actividades territoriales y columnas de militantes sobre energía, agua, ruralidad y transición justa en Chile.">
+<link rel="canonical" href="https://frecos-nmd.github.io/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#00796B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%2300796B'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle'%3EFE%3C/text%3E%3C/svg%3E">
+<!-- Vista previa al compartir (WhatsApp, Facebook, X, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<meta property="og:site_name" content="Frente Ecosocial y Nuevo Modelo de Desarrollo">
+<meta property="og:title" content="Frente Ecosocial y Nuevo Modelo de Desarrollo — Frente Amplio">
+<meta property="og:description" content="Análisis, actividades y voces del Frente. Un desarrollo que se comprenda dentro de los límites de la naturaleza.">
+<meta property="og:url" content="https://frecos-nmd.github.io/">
+<meta property="og:image" content="https://frecos-nmd.github.io/compartir.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Frente Ecosocial y Nuevo Modelo de Desarrollo: un desarrollo que se comprenda dentro de los límites de la naturaleza">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://frecos-nmd.github.io/compartir.jpg">
+<!-- Datos estructurados para buscadores -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Frente Ecosocial y Nuevo Modelo de Desarrollo","alternateName":["Frecos","Frente Ecosocial del Frente Amplio"],"url":"https://frecos-nmd.github.io/","logo":"https://frecos-nmd.github.io/compartir.jpg","description":"Frente Ecosocial y Nuevo Modelo de Desarrollo del Frente Amplio: análisis de coyuntura, actividades territoriales y columnas de militantes sobre energía, agua, ruralidad y transición justa en Chile.","sameAs":["https://www.instagram.com/frenteeconmd/"],"parentOrganization":{"@type":"PoliticalParty","name":"Frente Amplio","url":"https://www.frenteamplio.cl/"},"areaServed":"CL"}
+</script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -65,7 +86,8 @@ h2{font-family:'Fraunces',serif;font-size:26px;font-weight:500;margin:0}
 .igpost{display:flex;justify-content:center;align-items:flex-start}
 .igpost .instagram-media{border-radius:6px!important;border:1px solid var(--divider)!important;box-shadow:none!important}
 .act{background:var(--paper);border:1px solid var(--divider);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
-.act .img{aspect-ratio:16/9;background:linear-gradient(135deg,#D6EAE5,#E9E3D3);background-size:cover;background-position:center 30%}
+.act .img{aspect-ratio:16/9;background:linear-gradient(135deg,#D6EAE5,#E9E3D3);overflow:hidden}
+.act .img img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
 .act .body{padding:14px 16px 16px}
 .act .tag{display:inline-block;font-size:10px;text-transform:uppercase;letter-spacing:.14em;font-weight:600;color:var(--earth);margin-bottom:4px}
 .act h3{font-family:'Fraunces',serif;font-size:18px;font-weight:600;line-height:1.25;margin:2px 0 6px}
@@ -94,6 +116,16 @@ h2{font-family:'Fraunces',serif;font-size:26px;font-weight:500;margin:0}
 .funcs{margin:16px 0 0;padding:0;list-style:none;font-size:14px;color:var(--muted)}
 .funcs li{padding:6px 0;border-bottom:1px solid var(--divider)}
 .funcs b{color:var(--text)}
+.nav-cta{color:var(--accent)!important}
+.join{background:var(--accent);color:#fff;border-radius:8px;padding:30px 32px;display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:center}
+@media(max-width:760px){.join{grid-template-columns:1fr;padding:24px 22px}}
+.join-title{font-family:'Fraunces',serif;font-size:clamp(22px,3vw,30px);font-weight:500;line-height:1.2;margin:0 0 10px;color:#fff}
+.join-text{font-size:15px;color:#E3F2EF;margin:0}
+.join-actions{text-align:center}
+.join-btn{display:inline-block;background:#fff;color:var(--accent);font-weight:600;font-size:15px;padding:13px 26px;border-radius:999px;text-decoration:none}
+.join-btn:hover{background:#F4F1EA}
+.join-btn.off{opacity:.75;pointer-events:none}
+.join-note{font-size:12px;color:#CFE9E3;margin-top:8px}
 footer{margin-top:60px;padding-top:14px;border-top:1px solid var(--divider-strong);font-size:12px;color:var(--subtle);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </style>
 </head>
@@ -114,39 +146,82 @@ footer{margin-top:60px;padding-top:14px;border-top:1px solid var(--divider-stron
 
   <div class="topbar">
     <div class="brand">Frente Ecosocial <span>y Nuevo Modelo de Desarrollo</span></div>
-    <div class="topbar-right"><a class="ig" data-ig href="#" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span data-ig-handle></span></a><span>Frente Amplio · <span id="upd"></span></span></div>
+    <div class="topbar-right"><a class="ig" data-ig href="https://www.instagram.com/frenteeconmd/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span data-ig-handle>@frenteeconmd</span></a><span>Frente Amplio · <span id="upd">Actualizado 17 nov 2026</span></span></div>
   </div>
   <nav>
     <a href="#coyuntura">Coyuntura</a>
     <a href="#actividades">El Frente en acción</a>
     <a href="#prensa">Militantes en prensa</a>
     <a href="#somos">Quiénes somos</a>
+    <a href="#sumate" class="nav-cta">Súmate</a>
   </nav>
 
   <div class="kicker">Ecologismo de mayorías</div>
   <h1>Un desarrollo que se comprenda dentro de los límites de la naturaleza</h1>
   <p class="lede">Análisis, actividades y voces del Frente Ecosocial y Nuevo Modelo de Desarrollo del Frente Amplio.</p>
-  <a class="ig-cta" data-ig href="#" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> Síguenos en Instagram <span data-ig-handle></span></a>
+  <a class="ig-cta" data-ig href="https://www.instagram.com/frenteeconmd/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> Síguenos en Instagram <span data-ig-handle>@frenteeconmd</span></a>
 
   <!-- ===== Coyuntura ===== -->
   <div class="section" id="coyuntura">
     <div class="section-head"><h2>Análisis de coyuntura</h2><div class="section-note">La mirada del Frente</div></div>
     <div class="feature">
-      <div id="coy-lead"></div>
-      <div class="side-list" id="coy-list"></div>
+      <div id="coy-lead"><article class="lead-piece">
+<div class="date">17 nov 2026</div>
+<h3><a href="analisis-congelamiento-diesel.html">Congelar el diésel: un alivio necesario que no puede convertirse en dependencia</a></h3>
+<p class="bajada">El congelamiento de los combustibles pactado con los camioneros le costaría al Fisco cerca de US$820 millones. Proteger a las familias es urgente, pero tal como está diseñado, el alivio refuerza la dependencia del petróleo.</p>
+<p class="quote">Por cada peso para congelar el diésel, un peso para dejar de depender de él.</p>
+<div class="byline">Por <b>Frente Ecosocial y Nuevo Modelo de Desarrollo</b></div>
+<a class="more" href="analisis-congelamiento-diesel.html">Leer análisis →</a>
+</article></div>
+      <div class="side-list" id="coy-list"><div class="date" style="margin-bottom:10px;font-weight:600">Próximos análisis</div><p class="empty" style="margin:0">Cada dos semanas, la lectura del Frente sobre un tema de la coyuntura.</p></div>
     </div>
   </div>
 
   <!-- ===== Actividades ===== -->
   <div class="section" id="actividades">
     <div class="section-head"><h2>El Frente en acción</h2><div class="section-note">Actividades y despliegue territorial</div></div>
-    <div class="acts" id="acts"></div>
+    <div class="acts" id="acts"><div class="act">
+<div class="img"><img alt="Día de la Fauna Nativa — Biodiversidad" loading="lazy" src="act-fauna-nativa.jpg"/></div>
+<div class="body"><span class="tag">Biodiversidad</span>
+<div class="date"></div>
+<h3><a href="https://www.instagram.com/p/DfdWJR_ILp0/" rel="noopener" target="_blank">Día de la Fauna Nativa</a></h3><p>Un recorrido por especies emblemáticas de Chile, del flamenco chileno al huemul. No hay desarrollo sin biodiversidad. <span style="font-size:11px;color:var(--subtle)">Foto: René Cortin, CC BY-SA 4.0</span></p></div></div><div class="act">
+<div class="img"><img alt="Encuentro con organizaciones campesinas — Nacional" loading="lazy" src="act-organizaciones-rurales.jpg"/></div>
+<div class="body"><span class="tag">Nacional</span>
+<div class="date">16 oct 2026</div>
+<h3><a href="https://www.instagram.com/p/Dejia19FNJ0/" rel="noopener" target="_blank">Encuentro con organizaciones campesinas</a></h3><p>Con Gael Yeomans y el Secretario Nacional de Frentes, nos reunimos con dirigentas y dirigentes de organizaciones rurales nacionales como UOC, Mucech, Anamuri, Nehuen y la Confederación Ranquil. El desarrollo nacional no es posible sin descentralización ni soberanía alimentaria.</p></div></div><div class="act">
+<div class="img"><img alt="En Punta de Choros, contra Dominga — Coquimbo · La Higuera" loading="lazy" src="act-punta-de-choros.jpg"/></div>
+<div class="body"><span class="tag">Coquimbo · La Higuera</span>
+<div class="date">11 oct 2026</div>
+<h3><a href="https://www.instagram.com/reel/DeX6KNFAIlX/" rel="noopener" target="_blank">En Punta de Choros, contra Dominga</a></h3><p>Junto a la presidenta del Frente Amplio y diputada Gael Yeomans, la diputada Carolina Tello, la presidenta regional del FA Paulina Elgueta y nuestro encargado político Luis Bolados, visitamos la Reserva Nacional Pingüino de Humboldt y conversamos con la alcaldesa Uberlinda Aquea y dirigentes productivos y sociales de La Higuera. Dominga amenaza el ecosistema y miles de empleos del turismo, la gastronomía y la pesca.</p></div></div></div>
   </div>
 
   <!-- ===== Prensa ===== -->
   <div class="section" id="prensa">
     <div class="section-head"><h2>Militantes en prensa</h2><div class="section-note">Columnas, entrevistas y apariciones</div></div>
-    <div class="press" id="press"></div>
+    <div class="press" id="press"><div class="pitem">
+<a class="pimg" href="https://www.elmostrador.cl/noticias/opinion/columnas/2026/11/12/soberania-energetica-y-costo-de-la-vida/" rel="noopener" target="_blank"><img alt="Soberanía energética y costo de la vida" loading="lazy" onerror="this.parentNode.remove()" src="villagran.jpg"/></a>
+<div class="ptext">
+<div class="date">Columna · El Mostrador · 12 nov 2026</div>
+<div class="t"><a href="https://www.elmostrador.cl/noticias/opinion/columnas/2026/11/12/soberania-energetica-y-costo-de-la-vida/" rel="noopener" target="_blank">Soberanía energética y costo de la vida</a></div>
+<p class="pb">Mientras la volatilidad frente a los combustibles encarece el costo de vida, aplazar exigencias de eficiencia energética perpetúa una contradicción estructural que Chile sí puede resolver.</p>
+<div class="who"><b>Camilo Villagrán</b> · Ex Seremi de Energía de La Araucanía</div>
+<a class="more" href="https://www.elmostrador.cl/noticias/opinion/columnas/2026/11/12/soberania-energetica-y-costo-de-la-vida/" rel="noopener" target="_blank">Leer en El Mostrador →</a>
+</div></div></div>
+  </div>
+
+  <!-- ===== Súmate ===== -->
+  <div class="section" id="sumate">
+    <div class="join">
+      <div>
+        <div class="kicker" style="color:#CFE9E3">Súmate al Frente</div>
+        <h2 class="join-title">Un nuevo modelo de desarrollo se construye con más gente</h2>
+        <p class="join-text">Si te interesan la energía, el agua, la ruralidad, la ciencia, las ciudades o la transición justa, hay un lugar para ti. Cuéntanos desde dónde y con qué quieres aportar, militantes y no militantes.</p>
+      </div>
+      <div class="join-actions">
+        <a id="join-btn" class="join-btn" href="#" target="_blank" rel="noopener">Quiero sumarme →</a>
+        <div class="join-note">Toma 2 minutos.</div>
+      </div>
+    </div>
   </div>
 
   <!-- ===== Quiénes somos ===== -->
@@ -158,7 +233,7 @@ footer{margin-top:60px;padding-top:14px;border-top:1px solid var(--divider-stron
         <blockquote class="thesis">No existe una contradicción inevitable entre desarrollo y ecología. La verdadera disputa es entre un modelo que concentra riqueza, depreda territorios y reproduce dependencia, y otro capaz de producir prosperidad mediante democracia económica, innovación, justicia territorial y protección de las condiciones que sostienen la vida.</blockquote>
       </div>
       <div>
-        <div class="chips" id="temas"></div>
+        <div class="chips" id="temas"><span class="chip">Transición socioecológica justa</span><span class="chip">Política industrial</span><span class="chip">Energía</span><span class="chip">Minería</span><span class="chip">Agua</span><span class="chip">Ruralidad</span><span class="chip">Soberanía alimentaria</span><span class="chip">Pesca y acuicultura</span><span class="chip">Ciencia y tecnología</span><span class="chip">Ciudades resilientes</span><span class="chip">Biodiversidad</span><span class="chip">Adaptación climática</span><span class="chip">Bienestar animal</span><span class="chip">Planificación pública</span></div>
         <ul class="funcs">
           <li><b>Política:</b> disputar las ideas sobre crecimiento, naturaleza, tecnología, soberanía y bienestar.</li>
           <li><b>Articulación social:</b> conectar al partido con organizaciones territoriales, ambientales, productivas y comunitarias.</li>
@@ -171,26 +246,31 @@ footer{margin-top:60px;padding-top:14px;border-top:1px solid var(--divider-stron
 
   <footer>
     <div>Frente Ecosocial y Nuevo Modelo de Desarrollo · Frente Amplio</div>
-    <div><a class="ig" data-ig href="#" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram <span data-ig-handle></span></a> · <span id="foot-upd"></span></div>
+    <div><a class="ig" data-ig href="https://www.instagram.com/frenteeconmd/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram <span data-ig-handle>@frenteeconmd</span></a> · <span id="foot-upd">Última actualización: 17 nov 2026</span></div>
   </footer>
 </div>
 
 <script>
 /* ===================== DATOS (editar aquí) ===================== */
 const DATOS = {
-  actualizado: "2026-11-16",
+  actualizado: "2026-11-17",
 
   // Usuario de Instagram del Frente, sin @. Si queda vacío, los enlaces se ocultan.
   instagram: "frenteeconmd",
 
+  // Link del formulario "Súmate" (Google Forms). Mientras esté vacío, el botón dice "Pronto".
+  formularioSumate: "",
+
+  // Código de GoatCounter (lo que va antes de .goatcounter.com). Vacío = sin contador.
+  goatcounter: "",
+
   // Análisis de coyuntura. La más reciente aparece destacada.
   // {fecha:"2026-11-20", titulo, bajada, cita (opcional), autor, url}
   coyuntura: [
-    {ejemplo:true, fecha:"2026-11-14", titulo:"Título del análisis de coyuntura de la semana",
-     bajada:"Bajada de dos o tres líneas que resume la lectura del Frente sobre un hecho de la semana y por qué importa para el modelo de desarrollo.",
-     cita:"Frase fuerza del análisis, en una línea.", autor:"Nombre Apellido · Equipo programático de Energía", url:"#"},
-    {ejemplo:true, fecha:"2026-11-07", titulo:"Análisis anterior: título corto", autor:"Nombre Apellido", url:"#"},
-    {ejemplo:true, fecha:"2026-10-31", titulo:"Otro análisis anterior", autor:"Equipo programático de Agua", url:"#"}
+    {fecha:"2026-11-17", titulo:"Congelar el diésel: un alivio necesario que no puede convertirse en dependencia",
+     bajada:"El congelamiento de los combustibles pactado con los camioneros le costaría al Fisco cerca de US$820 millones. Proteger a las familias es urgente, pero tal como está diseñado, el alivio refuerza la dependencia del petróleo.",
+     cita:"Por cada peso para congelar el diésel, un peso para dejar de depender de él.",
+     autor:"Frente Ecosocial y Nuevo Modelo de Desarrollo", url:"analisis-congelamiento-diesel.html", interno:true}
   ],
 
   // Actividades del Frecos.
@@ -231,7 +311,8 @@ const fmt = s => { if(!s) return ""; const d=new Date(s+"T12:00:00"); return d.g
 const key = o => o.fecha || "9999";
 const byDate = arr => [...arr].sort((a,b)=>key(b).localeCompare(key(a)));
 const ej = o => o.ejemplo ? '<span class="ej">Ejemplo</span>' : '';
-const link = (o,txt) => o.url ? `<a href="${o.url}" target="_blank" rel="noopener">${txt}</a>` : txt;
+const tgt = o => o.interno ? '' : ' target="_blank" rel="noopener"';
+const link = (o,txt) => o.url ? `<a href="${o.url}"${tgt(o)}>${txt}</a>` : txt;
 
 /* Instagram */
 document.querySelectorAll("[data-ig]").forEach(a=>{
@@ -239,6 +320,20 @@ document.querySelectorAll("[data-ig]").forEach(a=>{
   a.href="https://www.instagram.com/"+DATOS.instagram+"/";
 });
 document.querySelectorAll("[data-ig-handle]").forEach(e=>e.textContent=DATOS.instagram?"@"+DATOS.instagram:"");
+/* Súmate */
+(function(){
+  const b=$("join-btn");
+  if(DATOS.formularioSumate){ b.href=DATOS.formularioSumate; }
+  else { b.textContent="Formulario disponible pronto"; b.classList.add("off"); b.removeAttribute("href"); $("join-btn").nextElementSibling.textContent=""; }
+})();
+
+/* Contador de visitas (GoatCounter, sin cookies) */
+if(DATOS.goatcounter){
+  const g=document.createElement("script"); g.async=true;
+  g.dataset.goatcounter="https://"+DATOS.goatcounter+".goatcounter.com/count";
+  g.src="https://gc.zgo.at/count.js"; document.body.appendChild(g);
+}
+
 $("upd").textContent = "Actualizado " + fmt(DATOS.actualizado);
 $("foot-upd").textContent = "Última actualización: " + fmt(DATOS.actualizado);
 $("temas").innerHTML = DATOS.temas.map(t=>`<span class="chip">${t}</span>`).join("");
@@ -254,19 +349,19 @@ $("temas").innerHTML = DATOS.temas.map(t=>`<span class="chip">${t}</span>`).join
     ${L.bajada?`<p class="bajada">${L.bajada}</p>`:""}
     ${L.cita?`<p class="quote">${L.cita}</p>`:""}
     <div class="byline">Por <b>${L.autor||"Frente Ecosocial"}</b></div>
-    ${L.url?`<a class="more" href="${L.url}" target="_blank" rel="noopener">Leer análisis →</a>`:""}
+    ${L.url?`<a class="more" href="${L.url}"${tgt(L)}>Leer análisis →</a>`:""}
   </article>`;
   const R = C.slice(1,6);
   $("coy-list").innerHTML = R.length
     ? `<div class="date" style="margin-bottom:10px;font-weight:600">Anteriores</div>` + R.map(p=>`<div class="item"><div class="date">${fmt(p.fecha)}${ej(p)}</div><div class="t">${link(p,p.titulo)}</div><div class="byline">${p.autor||""}</div></div>`).join("")
-    : "";
+    : `<div class="date" style="margin-bottom:10px;font-weight:600">Próximos análisis</div><p class="empty" style="margin:0">Cada dos semanas, la lectura del Frente sobre un tema de la coyuntura.</p>`;
 })();
 
 /* Actividades */
 (function(){
   const A = byDate(DATOS.actividades).slice(0,6);
   const cards = A.map(a=>`<div class="act">
-      <div class="img"${a.imagen?` style="background-image:url('${a.imagen}')"`:""}></div>
+      <div class="img">${a.imagen?`<img src="${a.imagen}" alt="${a.titulo}${a.lugar?" — "+a.lugar:""}" loading="lazy">`:""}</div>
       <div class="body"><span class="tag">${a.lugar||""}</span>${ej(a)}
         <div class="date">${fmt(a.fecha)}</div>
         <h3>${link(a,a.titulo)}</h3><p>${a.texto||""}</p></div></div>`).join("");
