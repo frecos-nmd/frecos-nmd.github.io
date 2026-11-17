@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frente Ecosocial y Nuevo Modelo de Desarrollo — Frente Amplio</title>
+<meta name="description" content="Análisis de coyuntura, actividades y noticias del Frente Ecosocial y Nuevo Modelo de Desarrollo del Frente Amplio.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F1EA; --paper:#FBF9F4; --divider:#DCD6C8; --divider-strong:#B9B09C;
+  --text:#18231F; --muted:#4D5A54; --subtle:#7C877F;
+  --accent:#00796B; --accent-soft:#D6EAE5; --earth:#A0522D; --sun:#C98A12;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,sans-serif;line-height:1.55}
+a{color:var(--accent)}
+.wrap{max-width:1020px;margin:0 auto;padding:30px 24px 60px}
+.topbar{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1.5px solid var(--text)}
+.brand{font-family:'Fraunces',serif;font-weight:600;font-size:19px}
+.brand span{font-weight:400;color:var(--muted)}
+.topbar-right{font-size:10.5px;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);font-weight:500}
+.topbar-right{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.ig{display:inline-flex;align-items:center;gap:5px;color:var(--accent);text-decoration:none;font-weight:600}
+.ig:hover{text-decoration:underline}
+.ig-cta{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:9px 16px;border:1.5px solid var(--accent);border-radius:999px;color:var(--accent);text-decoration:none;font-size:13.5px;font-weight:600}
+.ig-cta:hover{background:var(--accent);color:#fff}
+nav{display:flex;gap:22px;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid var(--divider);margin-bottom:30px;font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:600}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.22em;color:var(--accent);font-weight:600;margin-bottom:8px}
+h1{font-family:'Fraunces',serif;font-size:clamp(30px,5vw,44px);font-weight:500;letter-spacing:-.015em;line-height:1.08;margin:0 0 14px}
+.lede{font-size:17px;color:var(--muted);max-width:720px;margin:0}
+.section{margin-top:56px;scroll-margin-top:20px}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid var(--divider-strong);padding-bottom:8px;margin-bottom:20px}
+h2{font-family:'Fraunces',serif;font-size:26px;font-weight:500;margin:0}
+.section-note{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--subtle);text-align:right}
+@media(max-width:600px){.section-note{display:none}}
+.date{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--subtle)}
+.ej{display:inline-block;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#7A5205;background:#FBEBC7;border:1px dashed #C98A12;padding:1px 6px;border-radius:3px;margin-left:6px;vertical-align:1px}
+.empty{font-size:14px;color:var(--subtle);font-style:italic}
+
+/* Coyuntura */
+.feature{display:grid;grid-template-columns:1.5fr 1fr;gap:28px}
+@media(max-width:760px){.feature{grid-template-columns:1fr}}
+.lead-piece{background:var(--paper);border:1px solid var(--divider);border-top:4px solid var(--accent);border-radius:4px;padding:22px 24px}
+.lead-piece h3{font-family:'Fraunces',serif;font-size:clamp(22px,3vw,28px);font-weight:500;line-height:1.2;margin:6px 0 10px}
+.lead-piece h3 a{color:var(--text);text-decoration:none}
+.lead-piece h3 a:hover{color:var(--accent)}
+.lead-piece .bajada{font-size:15.5px;color:var(--muted);margin:0 0 14px}
+.lead-piece .quote{font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:var(--accent);border-left:3px solid var(--accent);padding:2px 0 2px 14px;margin:0 0 14px}
+.byline{font-size:13px;color:var(--muted)}
+.byline b{color:var(--text);font-weight:600}
+.more{display:inline-block;margin-top:12px;font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:600;text-decoration:none}
+.side-list .item{padding:12px 0;border-bottom:1px solid var(--divider)}
+.side-list .item:first-child{padding-top:0}
+.side-list .t{font-family:'Fraunces',serif;font-size:17px;line-height:1.3;margin:3px 0}
+.side-list .t a{color:var(--text);text-decoration:none}
+.side-list .t a:hover{color:var(--accent)}
+
+/* Actividades */
+.acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.act{background:var(--paper);border:1px solid var(--divider);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.act .img{aspect-ratio:16/9;background:linear-gradient(135deg,#D6EAE5,#E9E3D3);background-size:cover;background-position:center}
+.act .body{padding:14px 16px 16px}
+.act .tag{display:inline-block;font-size:10px;text-transform:uppercase;letter-spacing:.14em;font-weight:600;color:var(--earth);margin-bottom:4px}
+.act h3{font-family:'Fraunces',serif;font-size:18px;font-weight:600;line-height:1.25;margin:2px 0 6px}
+.act p{font-size:14px;color:var(--muted);margin:0}
+
+/* Prensa militantes */
+.pitem{display:grid;grid-template-columns:220px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--divider)}
+.pitem:first-child{padding-top:0}
+.pitem:not(:has(.pimg)){grid-template-columns:1fr}
+.pimg img{width:100%;display:block;border-radius:4px;border:1px solid var(--divider)}
+.press .t{font-family:'Fraunces',serif;font-size:clamp(20px,2.6vw,25px);line-height:1.25;margin:4px 0 8px}
+.press .t a{color:var(--text);text-decoration:none}
+.press .t a:hover{color:var(--accent)}
+.press .pb{font-size:15px;color:var(--muted);margin:0 0 10px}
+.press .who{font-size:13.5px;color:var(--muted)}
+.press .who b{color:var(--text)}
+@media(max-width:600px){.pitem{grid-template-columns:1fr;gap:14px}.pimg{max-width:320px}}
+/* Quiénes somos */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.thesis{font-family:'Fraunces',serif;font-style:italic;font-size:19px;line-height:1.45;color:var(--accent);border-left:3px solid var(--accent);padding:4px 0 4px 18px;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+.chip{font-size:12px;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:#0B4F46;font-weight:500}
+.funcs{margin:16px 0 0;padding:0;list-style:none;font-size:14px;color:var(--muted)}
+.funcs li{padding:6px 0;border-bottom:1px solid var(--divider)}
+.funcs b{color:var(--text)}
+footer{margin-top:60px;padding-top:14px;border-top:1px solid var(--divider-strong);font-size:12px;color:var(--subtle);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<!--
+  ============================================================
+  CÓMO ACTUALIZAR ESTA PÁGINA
+  Todo el contenido que cambia está en el bloque DATOS, al final
+  (dentro de <script>). Para publicar algo nuevo, agrega una
+  entrada a la lista correspondiente; se ordenan solas por fecha.
+   - coyuntura:    análisis del Frente (la más reciente sale destacada)
+   - actividades:  lo que está haciendo el Frecos
+   - prensa:       noticias, columnas y entrevistas de militantes
+  Las entradas con  ejemplo:true  son de muestra: bórralas.
+  ============================================================
+-->
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand">Frente Ecosocial <span>y Nuevo Modelo de Desarrollo</span></div>
+    <div class="topbar-right"><a class="ig" data-ig href="#" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span data-ig-handle></span></a><span>Frente Amplio · <span id="upd"></span></span></div>
+  </div>
+  <nav>
+    <a href="#coyuntura">Coyuntura</a>
+    <a href="#actividades">El Frente en acción</a>
+    <a href="#prensa">Militantes en prensa</a>
+    <a href="#somos">Quiénes somos</a>
+  </nav>
+
+  <div class="kicker">Ecologismo de mayorías</div>
+  <h1>Un desarrollo que se comprenda dentro de los límites de la naturaleza</h1>
+  <p class="lede">Análisis, actividades y voces del Frente Ecosocial y Nuevo Modelo de Desarrollo del Frente Amplio.</p>
+  <a class="ig-cta" data-ig href="#" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> Síguenos en Instagram <span data-ig-handle></span></a>
+
+  <!-- ===== Coyuntura ===== -->
+  <div class="section" id="coyuntura">
+    <div class="section-head"><h2>Análisis de coyuntura</h2><div class="section-note">La mirada del Frente</div></div>
+    <div class="feature">
+      <div id="coy-lead"></div>
+      <div class="side-list" id="coy-list"></div>
+    </div>
+  </div>
+
+  <!-- ===== Actividades ===== -->
+  <div class="section" id="actividades">
+    <div class="section-head"><h2>El Frente en acción</h2><div class="section-note">Actividades y despliegue territorial</div></div>
+    <div class="acts" id="acts"></div>
+  </div>
+
+  <!-- ===== Prensa ===== -->
+  <div class="section" id="prensa">
+    <div class="section-head"><h2>Militantes en prensa</h2><div class="section-note">Columnas, entrevistas y apariciones</div></div>
+    <div class="press" id="press"></div>
+  </div>
+
+  <!-- ===== Quiénes somos ===== -->
+  <div class="section" id="somos">
+    <div class="section-head"><h2>Quiénes somos</h2><div class="section-note">Plan político del período</div></div>
+    <div class="about">
+      <div>
+        <p style="margin:0 0 16px;color:var(--muted)">Somos el espacio de articulación política, social, territorial y programática del Frente Amplio para construir una propuesta de desarrollo que combine prosperidad material, transformación productiva, justicia social y territorial y protección de la naturaleza.</p>
+        <blockquote class="thesis">No existe una contradicción inevitable entre desarrollo y ecología. La verdadera disputa es entre un modelo que concentra riqueza, depreda territorios y reproduce dependencia, y otro capaz de producir prosperidad mediante democracia económica, innovación, justicia territorial y protección de las condiciones que sostienen la vida.</blockquote>
+      </div>
+      <div>
+        <div class="chips" id="temas"></div>
+        <ul class="funcs">
+          <li><b>Política:</b> disputar las ideas sobre crecimiento, naturaleza, tecnología, soberanía y bienestar.</li>
+          <li><b>Articulación social:</b> conectar al partido con organizaciones territoriales, ambientales, productivas y comunitarias.</li>
+          <li><b>Territorial:</b> actuar sobre conflictos y oportunidades de desarrollo en cada región.</li>
+          <li><b>Programática y formación:</b> convertir la experiencia en propuestas y formación de cuadros.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div>Frente Ecosocial y Nuevo Modelo de Desarrollo · Frente Amplio</div>
+    <div><a class="ig" data-ig href="#" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram <span data-ig-handle></span></a> · <span id="foot-upd"></span></div>
+  </footer>
+</div>
+
+<script>
+/* ===================== DATOS (editar aquí) ===================== */
+const DATOS = {
+  actualizado: "2026-11-16",
+
+  // Usuario de Instagram del Frente, sin @. Si queda vacío, los enlaces se ocultan.
+  instagram: "frenteeconmd",
+
+  // Análisis de coyuntura. La más reciente aparece destacada.
+  // {fecha:"2026-11-20", titulo, bajada, cita (opcional), autor, url}
+  coyuntura: [
+    {ejemplo:true, fecha:"2026-11-14", titulo:"Título del análisis de coyuntura de la semana",
+     bajada:"Bajada de dos o tres líneas que resume la lectura del Frente sobre un hecho de la semana y por qué importa para el modelo de desarrollo.",
+     cita:"Frase fuerza del análisis, en una línea.", autor:"Nombre Apellido · Equipo programático de Energía", url:"#"},
+    {ejemplo:true, fecha:"2026-11-07", titulo:"Análisis anterior: título corto", autor:"Nombre Apellido", url:"#"},
+    {ejemplo:true, fecha:"2026-10-31", titulo:"Otro análisis anterior", autor:"Equipo programático de Agua", url:"#"}
+  ],
+
+  // Actividades del Frecos.
+  // {fecha, lugar, titulo, texto, imagen (opcional: archivo del repo o URL), url (opcional)}
+  actividades: [
+    {ejemplo:true, fecha:"2026-11-12", lugar:"Región Metropolitana", titulo:"Nombre de la actividad",
+     texto:"Una o dos líneas sobre qué se hizo, con quién y qué salió de ahí."},
+    {ejemplo:true, fecha:"2026-11-05", lugar:"Biobío", titulo:"Encuentro con organización territorial",
+     texto:"Descripción breve de la actividad y sus acuerdos."},
+    {ejemplo:true, fecha:"2026-10-28", lugar:"Nacional", titulo:"Sesión de formación",
+     texto:"Tema de la sesión y número aproximado de participantes."}
+  ],
+
+  // Militantes en prensa.
+  // {fecha, persona, rol, titulo, bajada (opcional), medio, tipo (Columna/Entrevista/Nota), url, imagen (opcional)}
+  prensa: [
+    {fecha:"2026-11-12", persona:"Camilo Villagrán", rol:"Ex Seremi de Energía de La Araucanía",
+     titulo:"Soberanía energética y costo de la vida",
+     bajada:"Mientras la volatilidad frente a los combustibles encarece el costo de vida, aplazar exigencias de eficiencia energética perpetúa una contradicción estructural que Chile sí puede resolver.",
+     medio:"El Mostrador", tipo:"Columna",
+     url:"https://www.elmostrador.cl/noticias/opinion/columnas/2026/11/12/soberania-energetica-y-costo-de-la-vida/",
+     imagen:"villagran.jpg"}
+  ],
+
+  temas: ["Transición socioecológica justa","Política industrial","Energía","Minería","Agua","Ruralidad","Soberanía alimentaria","Pesca y acuicultura","Ciencia y tecnología","Ciudades resilientes","Biodiversidad","Adaptación climática","Bienestar animal","Planificación pública"]
+};
+/* =============================================================== */
+
+const $ = id => document.getElementById(id);
+const MESES=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+const fmt = s => { const d=new Date(s+"T12:00:00"); return d.getDate()+" "+MESES[d.getMonth()]+" "+d.getFullYear(); };
+const byDate = arr => [...arr].sort((a,b)=>b.fecha.localeCompare(a.fecha));
+const ej = o => o.ejemplo ? '<span class="ej">Ejemplo</span>' : '';
+const link = (o,txt) => o.url ? `<a href="${o.url}" target="_blank" rel="noopener">${txt}</a>` : txt;
+
+/* Instagram */
+document.querySelectorAll("[data-ig]").forEach(a=>{
+  if(!DATOS.instagram){ a.style.display="none"; return; }
+  a.href="https://www.instagram.com/"+DATOS.instagram+"/";
+});
+document.querySelectorAll("[data-ig-handle]").forEach(e=>e.textContent=DATOS.instagram?"@"+DATOS.instagram:"");
+$("upd").textContent = "Actualizado " + fmt(DATOS.actualizado);
+$("foot-upd").textContent = "Última actualización: " + fmt(DATOS.actualizado);
+$("temas").innerHTML = DATOS.temas.map(t=>`<span class="chip">${t}</span>`).join("");
+
+/* Coyuntura */
+(function(){
+  const C = byDate(DATOS.coyuntura);
+  if(!C.length){ $("coy-lead").innerHTML='<p class="empty">Pronto: el primer análisis de coyuntura del Frente.</p>'; return; }
+  const L = C[0];
+  $("coy-lead").innerHTML = `<article class="lead-piece">
+    <div class="date">${fmt(L.fecha)}${ej(L)}</div>
+    <h3>${link(L,L.titulo)}</h3>
+    ${L.bajada?`<p class="bajada">${L.bajada}</p>`:""}
+    ${L.cita?`<p class="quote">${L.cita}</p>`:""}
+    <div class="byline">Por <b>${L.autor||"Frente Ecosocial"}</b></div>
+    ${L.url?`<a class="more" href="${L.url}" target="_blank" rel="noopener">Leer análisis →</a>`:""}
+  </article>`;
+  const R = C.slice(1,6);
+  $("coy-list").innerHTML = R.length
+    ? `<div class="date" style="margin-bottom:10px;font-weight:600">Anteriores</div>` + R.map(p=>`<div class="item"><div class="date">${fmt(p.fecha)}${ej(p)}</div><div class="t">${link(p,p.titulo)}</div><div class="byline">${p.autor||""}</div></div>`).join("")
+    : "";
+})();
+
+/* Actividades */
+(function(){
+  const A = byDate(DATOS.actividades).slice(0,6);
+  $("acts").innerHTML = A.length ? A.map(a=>`<div class="act">
+      <div class="img"${a.imagen?` style="background-image:url('${a.imagen}')"`:""}></div>
+      <div class="body"><span class="tag">${a.lugar||""}</span>${ej(a)}
+        <div class="date">${fmt(a.fecha)}</div>
+        <h3>${link(a,a.titulo)}</h3><p>${a.texto||""}</p></div></div>`).join("")
+    : '<p class="empty">Pronto: actividades del Frente.</p>';
+})();
+
+/* Prensa */
+(function(){
+  const P = byDate(DATOS.prensa);
+  $("press").innerHTML = P.map(p=>`<div class="pitem">
+      ${p.imagen?`<a class="pimg" href="${p.url||"#"}" target="_blank" rel="noopener"><img src="${p.imagen}" alt="${p.titulo}" loading="lazy" onerror="this.parentNode.remove()"></a>`:""}
+      <div class="ptext">
+        <div class="date">${p.tipo?p.tipo+" · ":""}${p.medio||""} · ${fmt(p.fecha)}${ej(p)}</div>
+        <div class="t">${link(p,p.titulo)}</div>
+        ${p.bajada?`<p class="pb">${p.bajada}</p>`:""}
+        <div class="who"><b>${p.persona}</b>${p.rol?` · ${p.rol}`:""}</div>
+        ${p.url?`<a class="more" href="${p.url}" target="_blank" rel="noopener">Leer en ${p.medio||"el medio"} →</a>`:""}
+      </div></div>`).join("");
+})();
+</script>
+</body>
+</html>
