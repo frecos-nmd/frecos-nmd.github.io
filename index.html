@@ -61,12 +61,16 @@ h2{font-family:'Fraunces',serif;font-size:26px;font-weight:500;margin:0}
 .side-list .t a:hover{color:var(--accent)}
 
 /* Actividades */
-.acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;align-items:start}
+.igpost{display:flex;justify-content:center;align-items:flex-start}
+.igpost .instagram-media{border-radius:6px!important;border:1px solid var(--divider)!important;box-shadow:none!important}
 .act{background:var(--paper);border:1px solid var(--divider);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
-.act .img{aspect-ratio:16/9;background:linear-gradient(135deg,#D6EAE5,#E9E3D3);background-size:cover;background-position:center}
+.act .img{aspect-ratio:16/9;background:linear-gradient(135deg,#D6EAE5,#E9E3D3);background-size:cover;background-position:center 30%}
 .act .body{padding:14px 16px 16px}
 .act .tag{display:inline-block;font-size:10px;text-transform:uppercase;letter-spacing:.14em;font-weight:600;color:var(--earth);margin-bottom:4px}
 .act h3{font-family:'Fraunces',serif;font-size:18px;font-weight:600;line-height:1.25;margin:2px 0 6px}
+.act h3 a{color:var(--text);text-decoration:none}
+.act h3 a:hover{color:var(--accent)}
 .act p{font-size:14px;color:var(--muted);margin:0}
 
 /* Prensa militantes */
@@ -192,13 +196,19 @@ const DATOS = {
   // Actividades del Frecos.
   // {fecha, lugar, titulo, texto, imagen (opcional: archivo del repo o URL), url (opcional)}
   actividades: [
-    {ejemplo:true, fecha:"2026-11-12", lugar:"Región Metropolitana", titulo:"Nombre de la actividad",
-     texto:"Una o dos líneas sobre qué se hizo, con quién y qué salió de ahí."},
-    {ejemplo:true, fecha:"2026-11-05", lugar:"Biobío", titulo:"Encuentro con organización territorial",
-     texto:"Descripción breve de la actividad y sus acuerdos."},
-    {ejemplo:true, fecha:"2026-10-28", lugar:"Nacional", titulo:"Sesión de formación",
-     texto:"Tema de la sesión y número aproximado de participantes."}
+    {fecha:"2026-10-11", lugar:"Coquimbo · La Higuera", titulo:"En Punta de Choros, contra Dominga",
+     texto:"Junto a la presidenta del Frente Amplio, Gael Yeomans, parlamentarias y la directiva regional, visitamos la Reserva Nacional Pingüino de Humboldt y conversamos con la alcaldesa Uberlinda Aquea y dirigentes productivos y sociales de La Higuera. Dominga amenaza el ecosistema y miles de empleos del turismo, la gastronomía y la pesca.",
+     imagen:"act-punta-de-choros.jpg", url:"https://www.instagram.com/reel/DeX6KNFAIlX/"},
+    {fecha:"2026-10-16", lugar:"Nacional", titulo:"Encuentro con organizaciones campesinas",
+     texto:"Con Gael Yeomans y el Secretario Nacional de Frentes, nos reunimos con dirigentas y dirigentes de organizaciones rurales nacionales como UOC, Mucech, Anamuri, Nehuen y la Confederación Ranquil. El desarrollo nacional no es posible sin descentralización ni soberanía alimentaria.",
+     imagen:"act-organizaciones-rurales.jpg", url:"https://www.instagram.com/p/Dejia19FNJ0/"},
+    {orden:1, lugar:"Biodiversidad", titulo:"Día de la Fauna Nativa",
+     texto:"Un recorrido por especies emblemáticas de Chile, del flamenco chileno al huemul. No hay desarrollo sin biodiversidad.",
+     imagen:"act-fauna-nativa.jpg", url:"https://www.instagram.com/p/DfdWJR_ILp0/"}
   ],
+
+  // Publicaciones de Instagram insertadas tal cual (opcional). Link limpio, sin lo que va después de "?".
+  instagramPosts: [],
 
   // Militantes en prensa.
   // {fecha, persona, rol, titulo, bajada (opcional), medio, tipo (Columna/Entrevista/Nota), url, imagen (opcional)}
@@ -217,8 +227,9 @@ const DATOS = {
 
 const $ = id => document.getElementById(id);
 const MESES=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
-const fmt = s => { const d=new Date(s+"T12:00:00"); return d.getDate()+" "+MESES[d.getMonth()]+" "+d.getFullYear(); };
-const byDate = arr => [...arr].sort((a,b)=>b.fecha.localeCompare(a.fecha));
+const fmt = s => { if(!s) return ""; const d=new Date(s+"T12:00:00"); return d.getDate()+" "+MESES[d.getMonth()]+" "+d.getFullYear(); };
+const key = o => o.fecha || "9999";
+const byDate = arr => [...arr].sort((a,b)=>key(b).localeCompare(key(a)));
 const ej = o => o.ejemplo ? '<span class="ej">Ejemplo</span>' : '';
 const link = (o,txt) => o.url ? `<a href="${o.url}" target="_blank" rel="noopener">${txt}</a>` : txt;
 
@@ -254,12 +265,14 @@ $("temas").innerHTML = DATOS.temas.map(t=>`<span class="chip">${t}</span>`).join
 /* Actividades */
 (function(){
   const A = byDate(DATOS.actividades).slice(0,6);
-  $("acts").innerHTML = A.length ? A.map(a=>`<div class="act">
+  const cards = A.map(a=>`<div class="act">
       <div class="img"${a.imagen?` style="background-image:url('${a.imagen}')"`:""}></div>
       <div class="body"><span class="tag">${a.lugar||""}</span>${ej(a)}
         <div class="date">${fmt(a.fecha)}</div>
-        <h3>${link(a,a.titulo)}</h3><p>${a.texto||""}</p></div></div>`).join("")
-    : '<p class="empty">Pronto: actividades del Frente.</p>';
+        <h3>${link(a,a.titulo)}</h3><p>${a.texto||""}</p></div></div>`).join("");
+  const ig = (DATOS.instagramPosts||[]).map(u=>`<div class="igpost"><blockquote class="instagram-media" data-instgrm-permalink="${u}?utm_source=ig_embed" data-instgrm-version="14" style="margin:0;width:100%;min-width:0;max-width:540px"><a href="${u}" target="_blank" rel="noopener">Ver esta publicación en Instagram</a></blockquote></div>`).join("");
+  $("acts").innerHTML = (cards+ig) || '<p class="empty">Pronto: actividades del Frente.</p>';
+  if(ig){ const sc=document.createElement("script"); sc.async=true; sc.src="https://www.instagram.com/embed.js"; document.body.appendChild(sc); }
 })();
 
 /* Prensa */
